@@ -107,12 +107,14 @@ The expected input to the model is preprocessed parcel-level fMRI time series, o
 1. standard fMRI preprocessing
 2. parcellation using the **Craddock CC200** atlas
 3. construction of sliding-window sequences
+
 For each sliding window:
 ```
 parcel-wise time series are used as node features
 functional connectivity (FC) is computed from Pearson correlation
 graph representations are then constructed for Stage I
 ```
+
 **Running the software on your own data**
 To use this repository on your own data, you should:
 1. Obtain approved access to the original neuroimaging dataset.
@@ -128,6 +130,7 @@ To use this repository on your own data, you should:
 * `--use_pretrain` Test checkpoints in [checkpoints](checkpoints)
 * `--dataset` ukb hcp-d hcp-ya hcp-a abide
 * `--custom_key` Node: node classification
+
 3. Training
 * `python prepare_data.py 
 * `python main.py
@@ -137,6 +140,7 @@ To use this repository on your own data, you should:
 
 **For Stage II**
 1. Put the datasets under the folder ```./dataset/```.
+
 2. Download the large language models from [Hugging Face](https://huggingface.co/). The default LLM is LLaMA-7B, you can change the `llm_ckp_dir` in `run.py` to use [GPT2](https://huggingface.co/openai-community/gpt2)
 
    For example, if you download and put the LLaMA directory successfully, the directory structure is as follows:
@@ -151,10 +155,13 @@ To use this repository on your own data, you should:
    - run.py
 3. Generate timestamp by gpt2, suffixed by {subjectid}.pt, \
 python [generate_timestamp_ukb.py](generate%20timestamp%2Fgenerate_timestamp_ukb.py) 
+
 4. Generate timestamp embeddings, and save them along with historical time series, common features, and characteristic features as H5 data, stored in dataset/ukb_input. The training, value, and test datasets need to be generated in three separate batches. 
 python [preprocess_ts.py](preprocess_ts.py)
+
 5. Training
 python [run.py](run.py)
+
 6. Testing
 * `use_pretrain == 'True'
 
@@ -166,6 +173,7 @@ Typical forecasting metrics include:
 * mPCC
 * FCPCC
 * FN
+
 Downstream analyses in the manuscript include:
 * ASD classification
 * sex identification
@@ -178,12 +186,14 @@ Most of the comparison algorithms have been integrated into the [models](models)
 ## Data Availability
 The data analyzed in this study are available only for bona fide research purposes and require approval from the corresponding data providers.
 The datasets used in the manuscript include:
-UK Biobank
+* UK Biobank
 * ABIDE
 * HCP-Young Adult
 * HCP-Development
 * HCP-Aging
+
 Due to privacy, ethical, and data-use restrictions, these datasets are not redistributed in this repository.
+
 Users must obtain access directly from the corresponding data providers and prepare the data locally before running the code.
 
 ## Acknowledgement
