@@ -55,11 +55,14 @@ BOLD-Cast/
 ## System Requirements
 
 **Hardware requirements**
+
 For small-scale testing or toy examples, BOLD-Cast can be run on a standard workstation.
+
 For full training and reproduction of the main experiments in the manuscript, we recommend:
 * NVIDIA GPU with at least 16–32 GB memory
 * Sufficient CPU RAM for loading preprocessed parcel-level fMRI data
 * Linux/Windows-based environment for large-scale training
+
 The main experiments in the manuscript were run on:
 * NVIDIA V100 GPUs (32 GB memory) 
 
@@ -67,6 +70,7 @@ The main experiments in the manuscript were run on:
 * NVIDIA GPU with at least 16–32 GB memory
 * Sufficient CPU RAM for loading preprocessed parcel-level fMRI data
 * Linux/Windows-based environment for large-scale training
+
 The main experiments in the manuscript were run on:
 * Window 11
 * Python=3.10
@@ -74,6 +78,7 @@ The main experiments in the manuscript were run on:
 * PyTorch=2.0.1
 
 **Python dependencies**
+
 Main dependencies are listed in requirements.txt.
 Typical packages include:
 
@@ -98,11 +103,13 @@ pip install -r requirements.txt
 
 **Typical installation time**
 On a normal desktop or workstation with a stable internet connection, installation typically takes:10–20 minutes. 
-Downloading pretrained language model checkpoints (download here: https://huggingface.co/openai-community/gpt2) may require additional time depending on network conditions.
+
+Downloading pretrained language model checkpoints may require additional time depending on network conditions.
 
 ## 📊Instructions for Use
 **Input data**
 BOLD-Cast does not operate directly on raw DICOM or raw NIfTI files.
+
 The expected input to the model is preprocessed parcel-level fMRI time series, obtained after:
 1. standard fMRI preprocessing
 2. parcellation using the **Craddock CC200** atlas
@@ -141,7 +148,7 @@ To use this repository on your own data, you should:
 **For Stage II**
 1. Put the datasets under the folder ```./dataset/```.
 
-2. Download the large language models from [Hugging Face](https://huggingface.co/). The default LLM is LLaMA-7B, you can change the `llm_ckp_dir` in `run.py` to use [GPT2](https://huggingface.co/openai-community/gpt2)
+2. Download the large language models from [Hugging Face](https://huggingface.co/). The default LLM is GPT2(https://huggingface.co/openai-community/gpt2)
 
    For example, if you download and put the LLaMA directory successfully, the directory structure is as follows:
    - data_provider
