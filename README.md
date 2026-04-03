@@ -52,9 +52,9 @@ BOLD-Cast/
 ├── README.md               # Project documentation
 └── [other files]
 ```
-## System Requirements
+# System Requirements
 
-**Hardware requirements**
+## Hardware requirements
 
 For small-scale testing or toy examples, BOLD-Cast can be run on a standard workstation.
 
@@ -66,7 +66,7 @@ For full training and reproduction of the main experiments in the manuscript, we
 The main experiments in the manuscript were run on:
 * NVIDIA V100 GPUs (32 GB memory) 
 
-**Software requirements**
+## Software requirements
 * NVIDIA GPU with at least 16–32 GB memory
 * Sufficient CPU RAM for loading preprocessed parcel-level fMRI data
 * Linux/Windows-based environment for large-scale training
@@ -77,7 +77,7 @@ The main experiments in the manuscript were run on:
 * Cuda=11.8
 * PyTorch=2.0.1
 
-**Python dependencies**
+## Python dependencies
 
 Main dependencies are listed in requirements.txt.
 Typical packages include:
@@ -106,8 +106,8 @@ On a normal desktop or workstation with a stable internet connection, installati
 
 Downloading pretrained language model checkpoints may require additional time depending on network conditions.
 
-## 📊Instructions for Use
-**Input data**
+# 📊Instructions for Use
+## Input data
 BOLD-Cast does not operate directly on raw DICOM or raw NIfTI files.
 
 The expected input to the model is preprocessed parcel-level fMRI time series, obtained after:
@@ -122,7 +122,8 @@ functional connectivity (FC) is computed from Pearson correlation
 graph representations are then constructed for Stage I
 ```
 
-**Running the software on your own data**
+## Running the software on your own data
+
 To use this repository on your own data, you should:
 1. Obtain approved access to the original neuroimaging dataset.
 2. Preprocess the fMRI data into parcel-level time series.
@@ -130,7 +131,10 @@ To use this repository on your own data, you should:
 4. Run Stage I to extract disentangled graph embeddings.
 5. Run Stage II to forecast future fMRI dynamics.
 
+## Reproduction instructions
+
 **For Stage I**
+
 1. Put the datasets under the folder ```./dataset/```.
 
 2. Important args:
@@ -145,7 +149,8 @@ To use this repository on your own data, you should:
 4. Testing
 * `use_pretrain == 'True'
 
-**For Stage II**
+## For Stage II
+
 1. Put the datasets under the folder ```./dataset/```.
 
 2. Download the large language models from [Hugging Face](https://huggingface.co/). The default LLM is GPT2(https://huggingface.co/openai-community/gpt2)
@@ -172,7 +177,8 @@ python [run.py](run.py)
 6. Testing
 * `use_pretrain == 'True'
 
-**Evaluation**
+## Evaluation
+
 Typical forecasting metrics include:
 * MAE
 * RMSE
@@ -186,11 +192,11 @@ Downstream analyses in the manuscript include:
 * sex identification
 * cognitive score prediction
 
-## ✨Comparison
+# ✨Comparison
 Most of the comparison algorithms have been integrated into the [models](models). Some GNN-based models cannot be integrated and are therefore not included.
 
 
-## Data Availability
+# Data Availability
 The data analyzed in this study are available only for bona fide research purposes and require approval from the corresponding data providers.
 The datasets used in the manuscript include:
 * UK Biobank
@@ -203,12 +209,12 @@ Due to privacy, ethical, and data-use restrictions, these datasets are not redis
 
 Users must obtain access directly from the corresponding data providers and prepare the data locally before running the code.
 
-## Acknowledgement
+# Acknowledgement
 We appreciate the following GitHub repos a lot for their valuable code and efforts.
 - Time-Series-Library (https://github.com/thuml/Time-Series-Library)
 - FPT (https://github.com/DAMO-DI-ML/NeurIPS2023-One-Fits-All)
 
-## Contact
+# Contact
 For questions regarding the code or manuscript, please contact:
 [Yu Jiang]
 [yuajiang@cuhk.edu.hk]
