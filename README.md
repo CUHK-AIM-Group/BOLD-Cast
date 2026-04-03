@@ -54,6 +54,13 @@ python [preprocess_ts.py](preprocess_ts.py)
 python [run.py](run.py)
 6. Testing
 * `use_pretrain == 'True'
+7. Tested environment:
+- OS: Ubuntu 20.04 LTS
+- Python: 3.10
+- PyTorch: 2.0.1
+- CUDA: 11.8
+- GPU: NVIDIA V100 32GB
+- Additional dependencies: see requirements.txt
 
 
 ## ✨Comparison
