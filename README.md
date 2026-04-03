@@ -61,6 +61,8 @@ Most of the comparison algorithms have been integrated into the [models](models)
 
 
 ## Acknowledgement
+No real demo dataset is deposited in the repository because the original fMRI datasets used in this study are access-controlled and subject to institutional and data-use restrictions. The repository instead provides full code, data format specifications, and instructions for users with approved access to prepare compatible inputs.
+
 We appreciate the following GitHub repos a lot for their valuable code and efforts.
 - Time-Series-Library (https://github.com/thuml/Time-Series-Library)
 - FPT (https://github.com/DAMO-DI-ML/NeurIPS2023-One-Fits-All)
