@@ -19,7 +19,7 @@ This repository contains the official PyTorch implementation of the paper:
 
 ---
 
-# 🚀Overview
+## 🚀Overview
 
 BOLD-Cast addresses a practical challenge in neuroimaging: how to obtain reliable long-range functional brain dynamics from short resting-state fMRI scans.
 
@@ -42,7 +42,7 @@ The model is trained on parcel-level resting-state fMRI signals parcellated usin
 
 # Repository Structure
 
-```text
+```
 BOLD-Cast/
 ├── Stage I/                # Graph-based disentanglement learning
 ├── Stage II/               # Autoregressive forecasting module
@@ -50,7 +50,7 @@ BOLD-Cast/
 ├── requirements.txt        # Python dependencies
 ├── README.md               # Project documentation
 └── [other files]
-
+```
 ## System Requirements
 
 **Hardware requirements**
