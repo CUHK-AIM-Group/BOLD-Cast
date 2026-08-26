@@ -1,2 +1,0 @@
-1011473.nii_cc200.npy
-Based on the pretreatment process of the additional materials and the NPY data obtained from CC200 atlas
