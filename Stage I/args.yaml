@@ -1,0 +1,19 @@
+# Stage I now exposes all active options in run.py so dataset paths, atlas,
+# ROI count and temporal length can be supplied directly from the command line.
+# This file is retained only for backward repository compatibility.
+
+stage1_defaults:
+  atlas: CC200
+  num_rois: 190
+  batch_size: 128
+  c_dim: 100
+  p_dim: 28
+  num_iters: 100
+  alpha: 1.0
+  beta: 1.0
+  lammbda: 1.0
+  lr_max: 0.01
+  lr_min: 0.000001
+  lr_reduce_patience: 3
+  early_stop_patience: 10
+  lr_reduce_factor: 0.5
